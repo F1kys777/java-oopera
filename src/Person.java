@@ -6,10 +6,6 @@ public class Person {
     private String surname;
     private Gender gender;
 
-    public enum Gender {
-        MALE,
-        FEMALE
-    }
 
     public Person(String name, String surname, Gender gender) {
         this.name = name;

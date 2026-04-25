@@ -1,20 +1,22 @@
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Theatre {
     public static void main(String[] args) {
 
-        Actor actor1 = new Actor("Андрей", "Гавриенко", Person.Gender.MALE, 152);
-        Actor actor2 = new Actor("Белла", "Дмитриенко", Person.Gender.FEMALE, 169);
-        Actor actor3 = new Actor("Валерий", "Евтухов", Person.Gender.MALE, 167);
+        Actor actor1 = new Actor("Андрей", "Гавриенко", Gender.MALE, 152);
+        Actor actor2 = new Actor("Белла", "Дмитриенко", Gender.FEMALE, 169);
+        Actor actor3 = new Actor("Валерий", "Евтухов", Gender.MALE, 167);
 
-        Director director1 = new Director("Женева", "Измайлова", Person.Gender.FEMALE, 1);
-        Director director2 = new Director("Захар", "Йобс", Person.Gender.MALE, 1);
+        Director director1 = new Director("Женева", "Измайлова", Gender.FEMALE, 1);
+        Director director2 = new Director("Захар", "Йобс", Gender.MALE, 1);
 
         Show ordinaryShow = new Show("Шоу", 152, director1, new ArrayList<>());
         Opera opera = new Opera("Опера", 167, director2, new ArrayList<>(),
                 "Людвиг ван Бетховен", "Либретто оперы ", 21);
+        Person choreographerPerson = new Person("Сергей", "Шестеперов", Gender.MALE);
         Ballet ballet = new Ballet("Балет", 169, director1, new ArrayList<>(),
-                "Пётр Чайковский", "Либретто балета ", "Сергей Шестеперов");
+                "Пётр Чайковский", "Либретто балета ", choreographerPerson);
 
         ordinaryShow.addActor(actor1);
         ordinaryShow.addActor(actor2);
